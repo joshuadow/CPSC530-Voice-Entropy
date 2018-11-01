@@ -1,5 +1,7 @@
 import com.musicg.fingerprint.FingerprintSimilarity;
 import com.musicg.wave.Wave;
+import com.musicg.wave.WaveFileManager;
+
 import javax.sound.midi.SysexMessage;
 import java.io.File;
 import java.io.*;
@@ -27,8 +29,8 @@ public class Main {
         catch (IOException e){
             System.out.println("IO Error on Entropy Calculation");
         }
-        System.out.println("Entropy of first file: " + Entropy.getShannonEntropy(file1Content));
-        System.out.println("Entropy of second file: " + Entropy.getShannonEntropy(file2Content));
+        System.out.println("Entropy of first file: " + Entropy.getEntropy(file1Content));
+        System.out.println("Entropy of second file: " + Entropy.getEntropy(file2Content));
 
         Wave sound1 = new Wave(s+"/"+file1);
         Wave sound2 = new Wave(s+"/"+file2);

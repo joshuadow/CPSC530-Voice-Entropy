@@ -3,7 +3,7 @@ import java.util.HashMap;
 public class Entropy {
 
     @SuppressWarnings("boxing")
-    public static double getShannonEntropy(byte[] b) {
+    public static double getEntropy(byte[] b) {
         int n = 0;
         HashMap<Character, Integer> hshmp = new HashMap<>();
         String s = b.toString();
